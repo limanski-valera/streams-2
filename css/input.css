@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar-open body {
+	overflow-y: hidden;
+}
+
+.button {
+	@apply p-2 inline-block rounded-md font-medium hover:bg-accentActive transition-all bg-bgWhite hover:text-textWhite lg:text-base lg:p-4;
+}
+.button--secondary {
+	@apply bg-[#E3E4E6];
+}
+.button._active {
+	@apply bg-accentActive text-textWhite;
+}
+
+.link {
+	@apply hover:text-accent transition-all;
+}
+
+.logo {
+	@apply inline-block transition-all hover:scale-105;
+}
+
+@media (max-width: 1024px) {
+	.header__list-languages {
+		left: 0;
+	}
+}
+
+._opened .header__current-language {
+	visibility: hidden;
+}
+
+.header__list-languages {
+	display: none;
+}
+
+._opened .header__list-languages {
+	display: flex;
+}
+
+.player-wrapper {
+	@apply pb-[57%] lg:pb-[50%] rounded overflow-hidden mb-8 relative;
+}
+.player-place {
+	@apply w-full h-full absolute top-0 left-0;
+}
+/* Player */
+
+.toolbar__link:hover,
+._active .toolbar__link {
+	@apply bg-[#E3E4E6] text-bgDark;
+}
+.toolbar__link:hover .toolbar__icon,
+._active .toolbar__link .toolbar__icon {
+	@apply fill-bgDark;
+}
+
+.sidebar__league-link._active {
+	@apply text-accent;
+}
+.search-form__input:focus + ._icon-search {
+	@apply text-accent;
+}
+
+@media (min-width: 992px) {
+	._grey-filter {
+		filter: grayscale(100%);
+		transition: filter 0.3s;
+	}
+	._grey-filter:hover {
+		filter: none;
+	}
+}
+
+.liga:not(:last-child) {
+	border-bottom: 1px solid #221fb2;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+}
+
+.liga--without-border:not(:last-child) {
+	border-bottom: none;
+}
+
+.content:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+.not-found {
+	background: url('../img/404-bg.jpg') center center / cover no-repeat;
+}
+
+.timer {
+	background: url('../img/timer.jpg') center center / cover no-repeat;
+}
+
+@media (max-width: 768px) {
+	.not-found {
+		background: url('../img/404-mobile.jpg') center center / cover no-repeat;
+	}
+	.timer {
+		background: url('../img/timer-mobile.jpg') center center / cover no-repeat;
+	}
+}
