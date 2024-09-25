@@ -26,12 +26,6 @@
 	@apply inline-block transition-all hover:scale-105;
 }
 
-@media (max-width: 1024px) {
-	.header__list-languages {
-		left: 0;
-	}
-}
-
 ._opened .header__current-language {
 	visibility: hidden;
 }
