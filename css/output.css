@@ -1322,6 +1322,12 @@ video {
   }
 }
 
+@media (max-width: 480px) {
+  .timer__title {
+    font-size: 1rem;
+  }
+}
+
 .placeholder\:text-\[\#00000050\]::-moz-placeholder{
   color: #00000050;
 }
@@ -1378,10 +1384,6 @@ video {
 @media (min-width: 1024px){
   .lg\:left-5{
     left: 1.25rem;
-  }
-
-  .lg\:right-0{
-    right: 0px;
   }
 
   .lg\:order-1{

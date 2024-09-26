@@ -102,3 +102,9 @@
 		background: url('../img/timer-mobile.jpg') center center / cover no-repeat;
 	}
 }
+
+@media (max-width: 480px) {
+	.timer__title {
+		font-size: 1rem;
+	}
+}
